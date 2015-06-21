@@ -1,36 +1,5 @@
-import java.util.Iterator;
-
-
-public class LikedListExample {
-    
-    public static void main(String args[]){
-    	
-    	Contacts john = new Contacts("John",123345);
-    	Contacts mona = new Contacts("Mona", 234456);
-    	Contacts dolly = new Contacts("dolly",346745);
-    	Contacts lola = new Contacts("lola", 374456);
-    	Contacts pinky = new Contacts("pinky",203345);
-    	Contacts sweety = new Contacts("sweety", 457456);
-    	LinkedList ll = new LinkedList();
-    	
-    	ll.printList();
-    	
-    	ll.add(john);
-    	ll.add(mona);
-    	ll.add(dolly);
-    	ll.add(lola);
-    	ll.add(pinky);
-    	
-    	ll.remove(3);
-    	ll.add(sweety,3);
-    	
-    	ll.printList();
-    	
-    	
-    }
-}
-
-class LinkedList{
+package root;
+public class LinkedList{
 	private Node head;
     private int listCount;
  
@@ -112,10 +81,7 @@ class LinkedList{
     		System.out.print("|  "+i+"  | "+temp.toString()+"  |-->");
     		i++;
     	}
-    	
-    }
-    
-    
+    } 
 }
 
 class Node{
@@ -151,34 +117,4 @@ class Node{
     public String toString(){
     	return data.toString();
     }
-}
-
-class Contacts{
-	private String name;
-	private int phone;
-	
-	public Contacts(String name, int phone) {
-		super();
-		this.name = name;
-		this.phone = phone;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	public int getPhone() {
-		return phone;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setPhone(int phone) {
-		this.phone = phone;
-	}
-
-	@Override
-    public String toString(){
-    	return name;
-    }
-	
 }
