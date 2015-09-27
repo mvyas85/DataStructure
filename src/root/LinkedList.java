@@ -86,9 +86,9 @@ public class LinkedList{
 
 class Node{
 	
-	private Node next;
+    private Node next;
     private Object data;
-     
+ 
 	Node(Object dataValue){
 		next = null;
 		data = dataValue;
@@ -97,19 +97,15 @@ class Node{
 	Node(Object dataValue, Node nextNode){
 		data = dataValue;
 	}
-	
 	Object getData() {
         return data;
     }
-	
 	void setData(Object dataValue) {
         data = dataValue;
     }
-	
 	Node getNext() {
         return next;
     }
-
     void setNext(Node nextValue) {
         next = nextValue;
     }
