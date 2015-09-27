@@ -98,19 +98,19 @@ class Node{
 		data = dataValue;
 	}
 	Object getData() {
-        return data;
-    }
+        	return data;
+	}
 	void setData(Object dataValue) {
-        data = dataValue;
-    }
+        	data = dataValue;
+    	}
 	Node getNext() {
-        return next;
-    }
-    void setNext(Node nextValue) {
-        next = nextValue;
-    }
-    @Override
-    public String toString(){
-    	return data.toString();
-    }
+        	return next;
+    	}
+    	void setNext(Node nextValue) {
+        	next = nextValue;
+    	}
+    	@Override
+    	public String toString(){
+    		return data.toString();
+    	}
 }
