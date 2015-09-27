@@ -1,25 +1,32 @@
 package root;
 public class LinkedList{
 	private Node head;
-    private int listCount;
- 
-    LinkedList() {
-        head = new Node(null);
-        listCount = 0;
-    }
-    
-    public void add(Object data){
-    	
-    	Node newNode = new Node(data);
-    	Node temp = head;
-    	
-    	while(temp.getNext() !=null){
-    		temp = temp.getNext();
+        private int listCount;
+        LinkedList() {
+	        head = new Node(null);
+	        listCount = 0;
     	}
-    	temp.setNext(newNode);
-    	listCount++;
-    }
-    
+    	public void add(Object data){
+	    	Node newNode = new Node(data);
+	    	Node temp = head;
+	    	
+	    	while(temp.getNext() !=null){
+	    		temp = temp.getNext();
+	    	}
+	    	temp.setNext(newNode);
+	    	listCount++;
+    	}
+    	public void remove(){
+	    	Node temp = head;
+	    	
+	    	while(temp.getNext() !=null){
+	    		temp = temp.getNext();
+	    	}
+	    	temp.setNext(null);
+	    	temp.setData(null);
+	    	listCount--;
+    	}
+}
     public void add(Object data, int index){
     	Node newNode = new Node(data);
     	Node temp = head;
